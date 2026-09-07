@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { DocentesModule } from './docentes/docentes.module.js';
+import { FacultadesModule } from './facultades/facultades.module.js';
 
 @Module({
   imports: [
@@ -20,6 +22,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         synchronize: configService.get<string>('DB_SYNCHRONIZE', 'false') === 'true',
       }),
     }),
+    DocentesModule,
+    FacultadesModule,
   ],
 })
 export class AppModule {}
