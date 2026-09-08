@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { DocentesModule } from './docentes/docentes.module.js';
 import { EspaciosModule } from './espacios/espacios.module.js';
 import { FacultadesModule } from './facultades/facultades.module.js';
+import { ReservasModule } from './reservas/reservas.module.js';
 import { RecursosModule } from './recursos/recursos.module.js';
 
 @Module({
@@ -28,6 +29,7 @@ import { RecursosModule } from './recursos/recursos.module.js';
     EspaciosModule,
     FacultadesModule,
     RecursosModule,
+    ReservasModule,
   ],
 })
 export class AppModule {}
