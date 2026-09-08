@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DocentesModule } from './docentes/docentes.module.js';
+import { EspaciosModule } from './espacios/espacios.module.js';
 import { FacultadesModule } from './facultades/facultades.module.js';
 
 @Module({
@@ -23,6 +24,7 @@ import { FacultadesModule } from './facultades/facultades.module.js';
       }),
     }),
     DocentesModule,
+    EspaciosModule,
     FacultadesModule,
   ],
 })
