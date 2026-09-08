@@ -3,9 +3,11 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Facultad } from '../../facultades/entities/facultad.entity.js';
+import type { Reserva } from '../../reservas/entities/reserva.entity.js';
 
 @Entity({ name: 'docentes' })
 export class Docente {
@@ -24,4 +26,7 @@ export class Docente {
   })
   @JoinColumn({ name: 'facultad_id' })
   facultad: Facultad;
+
+  @OneToMany('Reserva', 'docente')
+  reservas: Reserva[];
 }
